@@ -10,6 +10,10 @@
 
 .login__column {
   width: 47%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #login .login__column > img {
@@ -40,6 +44,7 @@
 
 .login__form input {
   box-sizing: border-box;
+  display: block;
   border-radius: 3px;
   border: 1px solid #EFEFEF;
   padding: 9px 8px 7px;
@@ -52,10 +57,15 @@
   height: 30px;
   display: flex;
   justify-content: space-between;
+
 }
 
 .login__column .loginbox .login__form input:first-child {
   margin-bottom: 10px;
+}
+
+.login__column .loginbox .login__form input:nth-child(2) {
+  margin-bottom: 15px;
 }
 
 .loginbox input:focus {
@@ -64,17 +74,19 @@
 }
 
 
-.loginbox button {
-  width: 270px;
-  height: 32px;
-  font-size: 14px;
+.login__column .loginbox .login__form input[type="submit"] {
   border: 0;
-  border-radius: 3px;
   color: white;
   font-weight: 600;
   background-color: #3897f0;
   padding: 7px;
-  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.login__form input[type="submit"]:active {
+  background-color: #74b6f5;
 }
 
 .login__small-link {
